@@ -3,7 +3,7 @@
     android:id="@+id/LoginLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/gradient"
+    android:background="@drawable/green_red_transition"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -18,7 +18,8 @@
         android:layout_below="@+id/UserNameField"
         android:ems="10"
         android:hint="@string/passwordHint"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
         android:id="@+id/NewUserButton"
@@ -49,7 +50,8 @@
         android:layout_marginTop="100dp"
         android:ems="10"
         android:hint="@string/userNameHint"
-        android:inputType="textPersonName" />
+        android:inputType="textPersonName"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageView
         android:id="@+id/logoImage"
