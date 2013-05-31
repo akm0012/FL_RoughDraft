@@ -34,6 +34,18 @@
         android:inputType="textPassword"
         android:textAppearance="?android:attr/textAppearanceLarge" />
 
+    <EditText
+        android:id="@+id/ConfirmPasswordField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/UserNameField"
+        android:layout_below="@+id/PasswordField"
+        android:ems="10"
+        android:hint="@string/confirmPassword"
+        android:inputType="textPassword"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="invisible" />
+
     <Button
         android:id="@+id/NewUserButton"
         android:layout_width="wrap_content"
@@ -41,7 +53,8 @@
         android:layout_alignLeft="@+id/PasswordField"
         android:layout_below="@+id/PasswordField"
         android:layout_marginTop="75dp"
-        android:text="@string/NewUserButton" />
+        android:text="@string/NewUserButton"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <Button
         android:id="@+id/LogInButton"
@@ -51,7 +64,8 @@
         android:layout_marginLeft="15dp"
         android:layout_marginTop="75dp"
         android:layout_toRightOf="@+id/NewUserButton"
-        android:text="@string/LogInButton" />
+        android:text="@string/LogInButton"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <ImageView
         android:id="@+id/logoImage"

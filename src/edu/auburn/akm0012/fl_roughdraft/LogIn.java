@@ -35,6 +35,7 @@ public class LogIn extends Activity {
 		// Instantiate all Buttons and Views
 		userNameField = (EditText) findViewById(R.id.UserNameField);
 		passwordField = (EditText) findViewById(R.id.PasswordField);
+		confirmPasswordField = (EditText) findViewById(R.id.ConfirmPasswordField);
 
 		newUserButton = (Button) findViewById(R.id.NewUserButton);
 		logInButton = (Button) findViewById(R.id.LogInButton);
@@ -44,16 +45,16 @@ public class LogIn extends Activity {
 		isNewUser = false;
 
 		testToasts_FailedLogin_PassDontMatch = Toast.makeText(this,
-				"LogIn Failed, Passwords Don't Match", Toast.LENGTH_SHORT);
+				"Log In Failed, Passwords Don't Match", Toast.LENGTH_SHORT);
 
 		testToasts_SuccessfulLogin = Toast.makeText(this,
-				"LogIn Successfull!!", Toast.LENGTH_SHORT);
+				"Log In Successfull!!", Toast.LENGTH_SHORT);
 
 		testToasts_FailedLogin_UsernameBlank = Toast.makeText(this,
-				"LogIn Failed, Username Blank", Toast.LENGTH_SHORT);
+				"Log In Failed, Username Blank", Toast.LENGTH_SHORT);
 
 		testToasts_FailedLogin_PasswordBlank = Toast.makeText(this,
-				"LogIn Failed, Password Blank", Toast.LENGTH_SHORT);
+				"Log In Failed, Password Blank", Toast.LENGTH_SHORT);
 
 		// User clicks the "New User" button
 		newUserButton.setOnClickListener(new View.OnClickListener() {
@@ -169,21 +170,23 @@ public class LogIn extends Activity {
 
 	private void addPasswordConfirmField() {
 
-		// Set the Layout parameters for the new EditText
-		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
-				LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-		layoutParams.addRule(RelativeLayout.BELOW, R.id.PasswordField);
-		layoutParams.addRule(RelativeLayout.ALIGN_LEFT, R.id.PasswordField);
+//		// Set the Layout parameters for the new EditText
+//		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
+//				LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+//		layoutParams.addRule(RelativeLayout.BELOW, R.id.PasswordField);
+//		layoutParams.addRule(RelativeLayout.ALIGN_LEFT, R.id.PasswordField);
+//
+//		confirmPasswordField = new EditText(this);
+//		confirmPasswordField.setInputType(InputType.TYPE_CLASS_TEXT
+//				| InputType.TYPE_TEXT_VARIATION_PASSWORD);
+//		confirmPasswordField.setHint("Confirm Password");
+//		confirmPasswordField.setEms(10);
+//		confirmPasswordField.setTextAppearance(this,
+//				android.R.style.TextAppearance_Large);
+//		loginLayout.addView(confirmPasswordField, layoutParams);
 
-		confirmPasswordField = new EditText(this);
-		confirmPasswordField.setInputType(InputType.TYPE_CLASS_TEXT
-				| InputType.TYPE_TEXT_VARIATION_PASSWORD);
-		confirmPasswordField.setHint("Confirm Password");
-		confirmPasswordField.setEms(10);
-		confirmPasswordField.setTextAppearance(this,
-				android.R.style.TextAppearance_Large);
-		loginLayout.addView(confirmPasswordField, layoutParams);
-
+		confirmPasswordField.setVisibility(View.VISIBLE);
+		
 		loginLayout.removeView(logInButton);
 
 		// Set some boolean so we know the "New User" button has changed to a
