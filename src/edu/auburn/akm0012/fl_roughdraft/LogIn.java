@@ -2,9 +2,9 @@ package edu.auburn.akm0012.fl_roughdraft;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.graphics.drawable.TransitionDrawable;
+import android.content.Context;
 import android.os.Bundle;
-import android.os.SystemClock;
+import android.os.Vibrator;
 import android.text.InputType;
 import android.view.View;
 import android.view.WindowManager;
@@ -79,8 +79,7 @@ public class LogIn extends Activity {
 						passwordField.setHint("Password");
 						confirmPasswordField.setHint("Confirm Password");
 
-						loginLayout
-								.setBackgroundResource(R.drawable.red_gradient);
+						negativeReinforcement();
 
 					}
 
@@ -92,8 +91,7 @@ public class LogIn extends Activity {
 						userNameField.setText("");
 						userNameField.setHint("User Name");
 
-						loginLayout
-								.setBackgroundResource(R.drawable.red_gradient);
+						negativeReinforcement();
 
 					}
 
@@ -110,23 +108,17 @@ public class LogIn extends Activity {
 						passwordField.setHint("Password");
 						confirmPasswordField.setHint("Confirm Password");
 
-						loginLayout
-								.setBackgroundResource(R.drawable.red_gradient);
+						negativeReinforcement();
 
 					}
 
 					else {
-						// userNameField.setHint("Type user)
-						//
-						// testToasts_FailedLogin.show();
 
 						registerNewUser(userNameField.getText().toString(),
 								passwordField.getText().toString());
 						testToasts_SuccessfulLogin.show();
 
-						loginLayout
-								.setBackgroundResource(R.drawable.green_gradient);
-
+						positiveReinforcement();
 					}
 				}
 			}
@@ -135,9 +127,7 @@ public class LogIn extends Activity {
 		// User clicks the "Log In" button
 		logInButton.setOnClickListener(new View.OnClickListener() {
 			public void onClick(View v) {
-
 				executeLogin();
-
 			}
 		});
 
@@ -146,13 +136,24 @@ public class LogIn extends Activity {
 				WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 	}
 
-	//This may be helpful when rotating the screen
+	private void negativeReinforcement() {
+		loginLayout.setBackgroundResource(R.drawable.red_gradient);
+		Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
+		// Vibrate for 500 milliseconds
+		vib.vibrate(500);
+	}
+
+	private void positiveReinforcement() {
+		loginLayout.setBackgroundResource(R.drawable.green_gradient);
+	}
+
+	// This may be helpful when rotating the screen
 	@Override
 	protected void onRestoreInstanceState(Bundle savedInstanceState) {
 		super.onRestoreInstanceState(savedInstanceState);
-		
+
 	}
-	
+
 	// Couldn't get this to work, maybe come back to later.
 	// private void changeBackround() {
 	//
@@ -179,7 +180,8 @@ public class LogIn extends Activity {
 				| InputType.TYPE_TEXT_VARIATION_PASSWORD);
 		confirmPasswordField.setHint("Confirm Password");
 		confirmPasswordField.setEms(10);
-		confirmPasswordField.setTextAppearance(this, android.R.style.TextAppearance_Large);
+		confirmPasswordField.setTextAppearance(this,
+				android.R.style.TextAppearance_Large);
 		loginLayout.addView(confirmPasswordField, layoutParams);
 
 		loginLayout.removeView(logInButton);
@@ -195,10 +197,12 @@ public class LogIn extends Activity {
 	// Returns a boolean if the login was successful.
 	private boolean registerNewUser(String newUserName, String newPassword) {
 
+		// Here we know the newUserName and newPassword are valid.
+		// However, we don't know if there is a duplicate in the database yet.
+
 		return false;
 	}
 
-	// Used as a placeholder, may not be necessary.
 	public void executeLogin() {
 
 		String username, password;
@@ -209,10 +213,10 @@ public class LogIn extends Activity {
 		// Username field is blank
 		if (username.matches("")) {
 			// Turn background red
-			userNameField.setHint("Username missing.");
+			userNameField.setHint("Username");
 
 			testToasts_FailedLogin_UsernameBlank.show();
-			loginLayout.setBackgroundResource(R.drawable.red_gradient);
+			negativeReinforcement();
 		}
 
 		else {
@@ -222,16 +226,16 @@ public class LogIn extends Activity {
 		// Password field is blank
 		if (password.matches("")) {
 			// Turn background red
-			passwordField.setHint("Password missing.");
+			passwordField.setHint("Password");
 
 			testToasts_FailedLogin_PasswordBlank.show();
-			loginLayout.setBackgroundResource(R.drawable.red_gradient);
+			negativeReinforcement();
 		}
 
 		else {
 			// Continue Login Progress
 			testToasts_SuccessfulLogin.show();
-			loginLayout.setBackgroundResource(R.drawable.green_gradient);
+			positiveReinforcement();
 
 		}
 
