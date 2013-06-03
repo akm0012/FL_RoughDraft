@@ -5,13 +5,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.os.Bundle;
 import android.os.Vibrator;
-import android.text.InputType;
+import android.view.Menu;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
-import android.widget.RelativeLayout.LayoutParams;
 import android.widget.Toast;
 
 @SuppressLint("ShowToast")
@@ -20,6 +19,12 @@ public class LogIn extends Activity {
 	private RelativeLayout loginLayout;
 	private EditText userNameField, passwordField, confirmPasswordField;
 	private Button newUserButton, logInButton;
+
+	String username, password;
+
+	int backgroundColor;
+
+	final int GREEN = 1, RED = 2;
 
 	private boolean isNewUser;
 
@@ -44,17 +49,24 @@ public class LogIn extends Activity {
 
 		isNewUser = false;
 
+		// It will always start as green
+		backgroundColor = GREEN;
+
+		// Username and password are null
+		username = null;
+		password = null;
+
 		testToasts_FailedLogin_PassDontMatch = Toast.makeText(this,
-				"Log In Failed, Passwords Don't Match", Toast.LENGTH_SHORT);
+				R.string.login_failed_pass_match, Toast.LENGTH_SHORT);
 
 		testToasts_SuccessfulLogin = Toast.makeText(this,
-				"Log In Successfull!!", Toast.LENGTH_SHORT);
+				R.string.login_success, Toast.LENGTH_SHORT);
 
 		testToasts_FailedLogin_UsernameBlank = Toast.makeText(this,
-				"Log In Failed, Username Blank", Toast.LENGTH_SHORT);
+				R.string.login_failed_user_blank, Toast.LENGTH_SHORT);
 
 		testToasts_FailedLogin_PasswordBlank = Toast.makeText(this,
-				"Log In Failed, Password Blank", Toast.LENGTH_SHORT);
+				R.string.login_failed_pass_blank, Toast.LENGTH_SHORT);
 
 		// User clicks the "New User" button
 		newUserButton.setOnClickListener(new View.OnClickListener() {
@@ -63,7 +75,7 @@ public class LogIn extends Activity {
 				if (!isNewUser) {
 					// Create new Confirm Password Field, changes the button to
 					// a register button.
-					addPasswordConfirmField();
+					addPasswordConfirmField(null);
 				}
 
 				else {
@@ -77,8 +89,8 @@ public class LogIn extends Activity {
 						passwordField.setText("");
 						confirmPasswordField.setText("");
 
-						passwordField.setHint("Password");
-						confirmPasswordField.setHint("Confirm Password");
+						passwordField.setHint(R.string.passwordHint);
+						confirmPasswordField.setHint(R.string.confirmPassword);
 
 						negativeReinforcement();
 
@@ -90,7 +102,7 @@ public class LogIn extends Activity {
 						testToasts_FailedLogin_UsernameBlank.show();
 
 						userNameField.setText("");
-						userNameField.setHint("User Name");
+						userNameField.setHint(R.string.userNameHint);
 
 						negativeReinforcement();
 
@@ -106,8 +118,8 @@ public class LogIn extends Activity {
 						passwordField.setText("");
 						confirmPasswordField.setText("");
 
-						passwordField.setHint("Password");
-						confirmPasswordField.setHint("Confirm Password");
+						passwordField.setHint(R.string.passwordHint);
+						confirmPasswordField.setHint(R.string.confirmPassword);
 
 						negativeReinforcement();
 
@@ -142,10 +154,13 @@ public class LogIn extends Activity {
 		Vibrator vib = (Vibrator) getSystemService(Context.VIBRATOR_SERVICE);
 		// Vibrate for 500 milliseconds
 		vib.vibrate(500);
+		backgroundColor = RED;
+
 	}
 
 	private void positiveReinforcement() {
 		loginLayout.setBackgroundResource(R.drawable.green_gradient);
+		backgroundColor = GREEN;
 	}
 
 	// This may be helpful when rotating the screen
@@ -153,6 +168,61 @@ public class LogIn extends Activity {
 	protected void onRestoreInstanceState(Bundle savedInstanceState) {
 		super.onRestoreInstanceState(savedInstanceState);
 
+		username = savedInstanceState.getString("username");
+		password = savedInstanceState.getString("password");
+
+		if (savedInstanceState.getBoolean("isConfirmPasswordFieldPresent")) {
+
+			addPasswordConfirmField(savedInstanceState
+					.getString("confirmPassword"));
+		}
+
+		switch (savedInstanceState.getInt("backgroundColor")) {
+
+		case GREEN:
+			loginLayout.setBackgroundResource(R.drawable.green_gradient);
+			backgroundColor = GREEN;
+			break;
+
+		case RED:
+			loginLayout.setBackgroundResource(R.drawable.red_gradient);
+			backgroundColor = RED;
+			break;
+
+		}
+
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle savedInstanceState) {
+
+		// Check if confirm password field is present
+		// -> Check if the register button (Button state)
+		// Check if any text in all three fields
+		// Check the background color
+
+		if (username != null && !username.matches("")) {
+			savedInstanceState.putString("userName", username);
+		}
+
+		if (password != null && !password.matches("")) {
+			savedInstanceState.putString("password", password);
+		}
+
+		if (confirmPasswordField.isShown()) {
+			savedInstanceState
+					.putBoolean("isConfirmPasswordFieldPresent", true);
+
+			if (confirmPasswordField.getText().toString() != null
+					&& !confirmPasswordField.getText().toString().matches("")) {
+				savedInstanceState.putString("confirmPassword",
+						confirmPasswordField.getText().toString());
+			}
+		}
+
+		savedInstanceState.putInt("backgroundColor", backgroundColor);
+
+		super.onSaveInstanceState(savedInstanceState);
 	}
 
 	// Couldn't get this to work, maybe come back to later.
@@ -168,7 +238,7 @@ public class LogIn extends Activity {
 	//
 	// }
 
-	private void addPasswordConfirmField() {
+	private void addPasswordConfirmField(String confirmPasswordFromSavedState) {
 
 		// // Set the Layout parameters for the new EditText
 		// RelativeLayout.LayoutParams layoutParams = new
@@ -188,6 +258,8 @@ public class LogIn extends Activity {
 
 		confirmPasswordField.setVisibility(View.VISIBLE);
 
+		confirmPasswordField.setText(confirmPasswordFromSavedState);
+
 		loginLayout.removeView(logInButton);
 
 		// Set some boolean so we know the "New User" button has changed to a
@@ -195,7 +267,6 @@ public class LogIn extends Activity {
 		isNewUser = true;
 
 		newUserButton.setText("Register");
-
 	}
 
 	// Returns a boolean if the login was successful.
@@ -208,8 +279,6 @@ public class LogIn extends Activity {
 	}
 
 	public void executeLogin() {
-
-		String username, password;
 
 		username = userNameField.getText().toString();
 		password = passwordField.getText().toString();
@@ -247,11 +316,11 @@ public class LogIn extends Activity {
 		// startActivity(intent);
 	}
 
-	// @Override
-	// public boolean onCreateOptionsMenu(Menu menu) {
-	// // Inflate the menu; this adds items to the action bar if it is present.
-	// getMenuInflater().inflate(R.menu.log_in, menu);
-	// return true;
-	// }
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu) {
+		// Inflate the menu; this adds items to the action bar if it is present.
+		getMenuInflater().inflate(R.menu.log_in, menu);
+		return true;
+	}
 
 }

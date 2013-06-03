@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">FL_RoughDraft</string>
+    <string name="app_name">FutureLab</string>
     <string name="action_settings">Settings</string>
-    
+
     <!-- Log In Strings -->
     <string name="userNameHint">User Name</string>
     <string name="passwordHint">Password</string>
-	<string name="confirmPassword">Confirm Password</string>
-	<string name="NewUserButton">New User?</string>
-	<string name="LogInButton">Log In</string>
-	<string name="LogoDescription">FutureLabLogo</string>
-
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="NewUserButton">New User?</string>
+    <string name="LogInButton">Log In</string>
+    <string name="LogoDescription">FutureLabLogo</string>
+    <string name="login_success">Log In Successful!!</string>
+	<string name="login_failed_pass_match">Log In Failed, Passwords Don\'t Match</string>
+    <string name="login_failed_user_blank">Log In Failed, Username Blank</string>
+    <string name="login_failed_pass_blank">Log In Failed, Password Blank</string>
+	
 </resources>
