@@ -170,23 +170,24 @@ public class LogIn extends Activity {
 
 	private void addPasswordConfirmField() {
 
-//		// Set the Layout parameters for the new EditText
-//		RelativeLayout.LayoutParams layoutParams = new RelativeLayout.LayoutParams(
-//				LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
-//		layoutParams.addRule(RelativeLayout.BELOW, R.id.PasswordField);
-//		layoutParams.addRule(RelativeLayout.ALIGN_LEFT, R.id.PasswordField);
-//
-//		confirmPasswordField = new EditText(this);
-//		confirmPasswordField.setInputType(InputType.TYPE_CLASS_TEXT
-//				| InputType.TYPE_TEXT_VARIATION_PASSWORD);
-//		confirmPasswordField.setHint("Confirm Password");
-//		confirmPasswordField.setEms(10);
-//		confirmPasswordField.setTextAppearance(this,
-//				android.R.style.TextAppearance_Large);
-//		loginLayout.addView(confirmPasswordField, layoutParams);
+		// // Set the Layout parameters for the new EditText
+		// RelativeLayout.LayoutParams layoutParams = new
+		// RelativeLayout.LayoutParams(
+		// LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT);
+		// layoutParams.addRule(RelativeLayout.BELOW, R.id.PasswordField);
+		// layoutParams.addRule(RelativeLayout.ALIGN_LEFT, R.id.PasswordField);
+		//
+		// confirmPasswordField = new EditText(this);
+		// confirmPasswordField.setInputType(InputType.TYPE_CLASS_TEXT
+		// | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+		// confirmPasswordField.setHint("Confirm Password");
+		// confirmPasswordField.setEms(10);
+		// confirmPasswordField.setTextAppearance(this,
+		// android.R.style.TextAppearance_Large);
+		// loginLayout.addView(confirmPasswordField, layoutParams);
 
 		confirmPasswordField.setVisibility(View.VISIBLE);
-		
+
 		loginLayout.removeView(logInButton);
 
 		// Set some boolean so we know the "New User" button has changed to a
@@ -216,7 +217,7 @@ public class LogIn extends Activity {
 		// Username field is blank
 		if (username.matches("")) {
 			// Turn background red
-			userNameField.setHint("Username");
+			userNameField.setHint("User Name");
 
 			testToasts_FailedLogin_UsernameBlank.show();
 			negativeReinforcement();
