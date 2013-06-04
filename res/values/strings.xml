@@ -17,8 +17,11 @@
     <string name="login_failed_pass_blank">Log In Failed, Password Blank</string>
     <string name="title_activity_main_module_selector">MainModuleSelector</string>
     <string name="hello_world">Hello world!</string>
-    
+
     <!-- Module Select Strings -->
     <string name="moduleSelectionHeader"><b>Module Select</b></string>
-	<string name="ModuleTextDescription_1">This is a description of the first module!</string>
+    <string name="ModuleTextDescription_1">GRAVITY \n\nThis is a description of the first module!</string>
+    <string name="ModuleTextDescription_2">UNIVERSAL GRAVITY \n\nThis is a description of the second module!</string>
+    <string name="ModuleTextDescription_3">OPTICS \n\nThis is a description of the third module!</string>
+
 </resources>

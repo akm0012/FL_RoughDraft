@@ -3,6 +3,7 @@ package edu.auburn.akm0012.fl_roughdraft;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Vibrator;
 import android.view.Menu;
@@ -292,10 +293,6 @@ public class LogIn extends Activity {
 			negativeReinforcement();
 		}
 
-		else {
-			// Continue Login Progress
-		}
-
 		// Password field is blank
 		if (password.matches("")) {
 			// Turn background red
@@ -309,11 +306,13 @@ public class LogIn extends Activity {
 			// Continue Login Progress
 			testToasts_SuccessfulLogin.show();
 			positiveReinforcement();
+			
+			 Intent intent = new Intent(this, MainModuleSelector.class);
+			 startActivity(intent);
 
 		}
 
-		// Intent intent = new Intent(this, FragmentSwitcher.class);
-		// startActivity(intent);
+		
 	}
 
 	@Override
