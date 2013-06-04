@@ -10,7 +10,7 @@
 
     <uses-permission android:name="android.permission.VIBRATE" />
 
-   <!--  We may want to limit this app to normal to large screens. --> 
+    <!-- We may want to limit this app to normal to large screens. -->
     <supports-screens
         android:largeScreens="true"
         android:normalScreens="true"
@@ -20,8 +20,8 @@
     <application
         android:allowBackup="true"
         android:icon="@drawable/startup"
-        android:logo="@drawable/ic_launcher"
         android:label="@string/app_name"
+        android:logo="@drawable/ic_launcher"
         android:theme="@style/AppTheme" >
         <activity
             android:name="edu.auburn.akm0012.fl_roughdraft.LogIn"
@@ -31,6 +31,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name="edu.auburn.akm0012.fl_roughdraft.MainModuleSelector"
+            android:label="@string/title_activity_main_module_selector" >
         </activity>
     </application>
 

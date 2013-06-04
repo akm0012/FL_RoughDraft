@@ -32,34 +32,48 @@ public final class R {
     }
     public static final class id {
         public static final int ConfirmPasswordField=0x7f080003;
+        public static final int IndividualModuleHolder=0x7f080009;
         public static final int LogInButton=0x7f080005;
         public static final int LoginLayout=0x7f080000;
-        public static final int Menu_add=0x7f080009;
+        public static final int Menu_add=0x7f08000d;
+        public static final int ModuleDetailsHolder=0x7f08000a;
+        public static final int ModuleSelectHeader=0x7f080008;
         public static final int NewUserButton=0x7f080004;
+        public static final int OverallModuleSelectLinearLayout=0x7f080007;
         public static final int PasswordField=0x7f080002;
         public static final int UserNameField=0x7f080001;
-        public static final int action_settings=0x7f080007;
+        public static final int action_settings=0x7f08000b;
         public static final int logoImage=0x7f080006;
-        public static final int menu_refresh=0x7f080008;
+        public static final int menu_refresh=0x7f08000c;
     }
     public static final class layout {
         public static final int activity_log_in=0x7f030000;
+        public static final int activity_main_module_selector=0x7f030001;
+        public static final int module_select_fragment=0x7f030002;
+        public static final int side_panel_fragment=0x7f030003;
     }
     public static final class menu {
         public static final int log_in=0x7f070000;
+        public static final int main_module_selector=0x7f070001;
     }
     public static final class string {
         public static final int LogInButton=0x7f050006;
         public static final int LogoDescription=0x7f050007;
+        public static final int ModuleIcon_1_Description=0x7f05000f;
         public static final int NewUserButton=0x7f050005;
         public static final int action_settings=0x7f050001;
         public static final int app_name=0x7f050000;
         public static final int confirmPassword=0x7f050004;
+        public static final int hello_world=0x7f05000d;
         public static final int login_failed_pass_blank=0x7f05000b;
         public static final int login_failed_pass_match=0x7f050009;
         public static final int login_failed_user_blank=0x7f05000a;
         public static final int login_success=0x7f050008;
+        /**  Module Select Strings 
+         */
+        public static final int moduleSelectionHeader=0x7f05000e;
         public static final int passwordHint=0x7f050003;
+        public static final int title_activity_main_module_selector=0x7f05000c;
         /**  Log In Strings 
          */
         public static final int userNameHint=0x7f050002;

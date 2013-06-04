@@ -12,8 +12,13 @@
     <string name="LogInButton">Log In</string>
     <string name="LogoDescription">FutureLabLogo</string>
     <string name="login_success">Log In Successful!!</string>
-	<string name="login_failed_pass_match">Log In Failed, Passwords Don\'t Match</string>
+    <string name="login_failed_pass_match">Log In Failed, Passwords Don\'t Match</string>
     <string name="login_failed_user_blank">Log In Failed, Username Blank</string>
     <string name="login_failed_pass_blank">Log In Failed, Password Blank</string>
-	
+    <string name="title_activity_main_module_selector">MainModuleSelector</string>
+    <string name="hello_world">Hello world!</string>
+    
+    <!-- Module Select Strings -->
+    <string name="moduleSelectionHeader"><b>Module Select</b></string>
+	<string name="ModuleTextDescription_1">This is a description of the first module!</string>
 </resources>
