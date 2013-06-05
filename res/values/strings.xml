@@ -23,5 +23,6 @@
     <string name="ModuleTextDescription_1">GRAVITY \n\nThis is a description of the first module!</string>
     <string name="ModuleTextDescription_2">UNIVERSAL GRAVITY \n\nThis is a description of the second module!</string>
     <string name="ModuleTextDescription_3">OPTICS \n\nThis is a description of the third module!</string>
+    <string name="ImageDescription">This is a picture of the selected module.</string>
 
 </resources>

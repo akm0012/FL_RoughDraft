@@ -133,6 +133,7 @@ public class LogIn extends Activity {
 						testToasts_SuccessfulLogin.show();
 
 						positiveReinforcement();
+						executeLogin();
 					}
 				}
 			}

@@ -17,80 +17,87 @@ public final class R {
          screen margins) for sw720dp devices (e.g. 10" tablets) in landscape here.
     
          */
-        public static final int activity_horizontal_margin=0x7f040000;
-        public static final int activity_vertical_margin=0x7f040001;
+        public static int activity_horizontal_margin=0x7f040000;
+        public static int activity_vertical_margin=0x7f040001;
     }
     public static final class drawable {
-        public static final int green_gradient=0x7f020000;
-        public static final int green_gradient_landscape=0x7f020001;
-        public static final int green_red_transition=0x7f020002;
-        public static final int green_red_transition_landscape=0x7f020003;
-        public static final int ic_launcher=0x7f020004;
-        public static final int module_icon_gravity=0x7f020005;
-        public static final int module_icon_one=0x7f020006;
-        public static final int monotone_arrow_next_right=0x7f020007;
-        public static final int optics=0x7f020008;
-        public static final int red_gradient=0x7f020009;
-        public static final int red_gradient_landscape=0x7f02000a;
-        public static final int startup=0x7f02000b;
+        public static int gray_gradient=0x7f020000;
+        public static int green_gradient=0x7f020001;
+        public static int green_gradient_landscape=0x7f020002;
+        public static int green_red_transition=0x7f020003;
+        public static int green_red_transition_landscape=0x7f020004;
+        public static int ic_launcher=0x7f020005;
+        public static int module_icon=0x7f020006;
+        public static int module_icon_gravity=0x7f020007;
+        public static int module_icon_one=0x7f020008;
+        public static int monotone_arrow_next_right=0x7f020009;
+        public static int optics=0x7f02000a;
+        public static int red_gradient=0x7f02000b;
+        public static int red_gradient_landscape=0x7f02000c;
+        public static int startup=0x7f02000d;
+        public static int utilities_icon=0x7f02000e;
     }
     public static final class id {
-        public static final int ConfirmPasswordField=0x7f080003;
-        public static final int LogInButton=0x7f080005;
-        public static final int LoginLayout=0x7f080000;
-        public static final int Menu_add=0x7f080015;
-        public static final int Module2Icon_Button=0x7f08000b;
-        public static final int Module3Icon_Button=0x7f08000e;
-        public static final int Module4Icon_Button=0x7f080011;
-        public static final int ModuleDescription_2=0x7f08000c;
-        public static final int ModuleDescription_3=0x7f08000f;
-        public static final int ModuleDescription_4=0x7f080012;
-        public static final int ModuleDetailsLinearLayout1=0x7f08000a;
-        public static final int ModuleDetailsLinearLayout3=0x7f08000d;
-        public static final int ModuleDetailsLinearLayout4=0x7f080010;
-        public static final int ModuleSelectHeader=0x7f080009;
-        public static final int NewUserButton=0x7f080004;
-        public static final int OverallModuleSelectLinearLayout=0x7f080008;
-        public static final int PasswordField=0x7f080002;
-        public static final int UserNameField=0x7f080001;
-        public static final int action_settings=0x7f080013;
-        public static final int logoImage=0x7f080006;
-        public static final int menu_refresh=0x7f080014;
-        public static final int moduleSelectorFragment=0x7f080007;
+        public static int ConfirmPasswordField=0x7f080003;
+        public static int LogInButton=0x7f080005;
+        public static int LoginLayout=0x7f080000;
+        public static int Menu_add=0x7f080018;
+        public static int Module2Icon_Button=0x7f08000c;
+        public static int Module3Icon_Button=0x7f08000f;
+        public static int Module4Icon_Button=0x7f080012;
+        public static int ModuleDescription_2=0x7f08000d;
+        public static int ModuleDescription_3=0x7f080010;
+        public static int ModuleDescription_4=0x7f080013;
+        public static int ModuleDetailsLinearLayout1=0x7f08000b;
+        public static int ModuleDetailsLinearLayout3=0x7f08000e;
+        public static int ModuleDetailsLinearLayout4=0x7f080011;
+        public static int ModuleSelectHeader=0x7f08000a;
+        public static int Module_Button=0x7f080015;
+        public static int NewUserButton=0x7f080004;
+        public static int OverallModuleSelectLinearLayout=0x7f080009;
+        public static int PasswordField=0x7f080002;
+        public static int Settings_Button=0x7f080014;
+        public static int UserNameField=0x7f080001;
+        public static int action_settings=0x7f080016;
+        public static int logoImage=0x7f080006;
+        public static int menu_refresh=0x7f080017;
+        public static int moduleSelectorFragment=0x7f080007;
+        public static int sidePanelFragment=0x7f080008;
     }
     public static final class layout {
-        public static final int activity_log_in=0x7f030000;
-        public static final int activity_main_module_selector=0x7f030001;
-        public static final int module_select_fragment=0x7f030002;
-        public static final int side_panel_fragment=0x7f030003;
+        public static int activity_log_in=0x7f030000;
+        public static int activity_main_module_selector=0x7f030001;
+        public static int module_select_fragment=0x7f030002;
+        public static int side_panel_fragment=0x7f030003;
     }
     public static final class menu {
-        public static final int log_in=0x7f070000;
-        public static final int main_module_selector=0x7f070001;
+        public static int log_in=0x7f070000;
+        public static int main_module_selector=0x7f070001;
     }
     public static final class string {
-        public static final int LogInButton=0x7f050006;
-        public static final int LogoDescription=0x7f050007;
-        public static final int ModuleTextDescription_1=0x7f05000f;
-        public static final int ModuleTextDescription_2=0x7f050010;
-        public static final int ModuleTextDescription_3=0x7f050011;
-        public static final int NewUserButton=0x7f050005;
-        public static final int action_settings=0x7f050001;
-        public static final int app_name=0x7f050000;
-        public static final int confirmPassword=0x7f050004;
-        public static final int hello_world=0x7f05000d;
-        public static final int login_failed_pass_blank=0x7f05000b;
-        public static final int login_failed_pass_match=0x7f050009;
-        public static final int login_failed_user_blank=0x7f05000a;
-        public static final int login_success=0x7f050008;
+        public static int ImageDescription=0x7f050012;
+        public static int LogInButton=0x7f050006;
+        public static int LogoDescription=0x7f050007;
+        public static int ModuleTextDescription_1=0x7f05000f;
+        public static int ModuleTextDescription_2=0x7f050010;
+        public static int ModuleTextDescription_3=0x7f050011;
+        public static int NewUserButton=0x7f050005;
+        public static int action_settings=0x7f050001;
+        public static int app_name=0x7f050000;
+        public static int confirmPassword=0x7f050004;
+        public static int hello_world=0x7f05000d;
+        public static int login_failed_pass_blank=0x7f05000b;
+        public static int login_failed_pass_match=0x7f050009;
+        public static int login_failed_user_blank=0x7f05000a;
+        public static int login_success=0x7f050008;
         /**  Module Select Strings 
          */
-        public static final int moduleSelectionHeader=0x7f05000e;
-        public static final int passwordHint=0x7f050003;
-        public static final int title_activity_main_module_selector=0x7f05000c;
+        public static int moduleSelectionHeader=0x7f05000e;
+        public static int passwordHint=0x7f050003;
+        public static int title_activity_main_module_selector=0x7f05000c;
         /**  Log In Strings 
          */
-        public static final int userNameHint=0x7f050002;
+        public static int userNameHint=0x7f050002;
     }
     public static final class style {
         /** 
@@ -114,10 +121,10 @@ public final class R {
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static int AppBaseTheme=0x7f060000;
         /**  Application theme. 
  All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
+        public static int AppTheme=0x7f060001;
     }
 }

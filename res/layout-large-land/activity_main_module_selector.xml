@@ -1,17 +1,23 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
     tools:context=".MainModuleSelector" >
 
     <fragment
-        android:name="edu.auburn.akm0012.fl_roughdraft.ModuleSelect_Fragment"
-        android:id="@+id/moduleSelectorFragment"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:id="@+id/sidePanelFragment"
+        android:name="edu.auburn.akm0012.fl_roughdraft.SidePanel_Fragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/side_panel_fragment" />
 
-</FrameLayout>
+    <fragment
+        android:id="@+id/moduleSelectorFragment"
+        android:name="edu.auburn.akm0012.fl_roughdraft.ModuleSelect_Fragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:layout="@layout/module_select_fragment" />
+
+</LinearLayout>
