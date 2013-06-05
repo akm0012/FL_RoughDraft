@@ -1,15 +1,31 @@
 package edu.auburn.akm0012.fl_roughdraft;
 
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
 import android.view.Menu;
 
-public class MainModuleSelector extends FragmentActivity {
+import com.jeremyfeinstein.slidingmenu.lib.SlidingMenu;
+
+public class MainModuleSelector extends Activity {
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main_module_selector);
+
+		// if (Configuration.getLayoutDirection() ==
+		// Configuration.ORIENTATION_PORTRAIT){
+		SlidingMenu menu;
+		menu = new SlidingMenu(this);
+		menu.setMode(SlidingMenu.LEFT);
+		menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
+		menu.setShadowWidth(5);
+		menu.setFadeDegree(0.0f);
+		menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+		menu.setBehindWidth(200);
+		menu.setMenu(R.layout.menu_frame);
+		// }
+
 	}
 
 	@Override
