@@ -7,12 +7,12 @@
     android:orientation="horizontal"
     tools:context=".MainModuleSelector" >
 
-    <fragment
+    <!-- <fragment
         android:id="@+id/sidePanelFragment_landscape"
         android:name="edu.auburn.akm0012.fl_roughdraft_fragments.SidePanel_Fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout="@layout/side_panel_fragment" />
+        tools:layout="@layout/side_panel_fragment" /> -->
 
     <FrameLayout
         android:id="@+id/moduleSelectorFragment_Landscape"
