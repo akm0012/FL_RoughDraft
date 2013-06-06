@@ -1,13 +1,13 @@
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/portrait_Module_Frame"
+    android:id="@+id/module_Frame_Portrait"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainModuleSelector" >
 
     <fragment
         android:id="@+id/moduleSelectorFragment"
-        android:name="edu.auburn.akm0012.fl_roughdraft.ModuleSelect_Fragment"
+        android:name="edu.auburn.akm0012.fl_roughdraft_fragments.ModuleSelect_Fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:layout="@layout/module_select_fragment" />

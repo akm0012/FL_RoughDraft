@@ -1,5 +1,6 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/module_Frame_Landscape"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:baselineAligned="false"
@@ -8,14 +9,14 @@
 
     <fragment
         android:id="@+id/sidePanelFragment_landscape"
-        android:name="edu.auburn.akm0012.fl_roughdraft.SidePanel_Fragment"
+        android:name="edu.auburn.akm0012.fl_roughdraft_fragments.SidePanel_Fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout="@layout/side_panel_fragment" />
 
     <fragment
         android:id="@+id/moduleSelectorFragment_landscape"
-        android:name="edu.auburn.akm0012.fl_roughdraft.ModuleSelect_Fragment"
+        android:name="edu.auburn.akm0012.fl_roughdraft_fragments.ModuleSelect_Fragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         tools:layout="@layout/module_select_fragment" />

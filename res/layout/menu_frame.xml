@@ -6,7 +6,7 @@
 
     <fragment
         android:id="@+id/sidePanelFragment_SlideMenu"
-        android:name="edu.auburn.akm0012.fl_roughdraft.SidePanel_Fragment"
+        android:name="edu.auburn.akm0012.fl_roughdraft_fragments.SidePanel_Fragment"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         tools:layout="@layout/side_panel_fragment" />

@@ -1,6 +1,8 @@
-package edu.auburn.akm0012.fl_roughdraft;
+package edu.auburn.akm0012.fl_roughdraft_fragments;
 
 
+import edu.auburn.akm0012.fl_roughdraft.R;
+import edu.auburn.akm0012.fl_roughdraft.R.layout;
 import android.app.Fragment;
 import android.os.Bundle;
 import android.view.LayoutInflater;
