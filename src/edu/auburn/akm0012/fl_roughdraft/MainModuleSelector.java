@@ -31,17 +31,31 @@ public class MainModuleSelector extends Activity {
 		setContentView(R.layout.activity_main_module_selector);
 
 		if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
-			SlidingMenu menu;
-			menu = new SlidingMenu(this);
-			menu.setMode(SlidingMenu.LEFT);
-			menu.setTouchModeAbove(SlidingMenu.TOUCHMODE_FULLSCREEN);
-			menu.setShadowWidth(5);
-			menu.setFadeDegree(0.0f);
-			menu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
-			menu.setBehindWidth(200);
-			menu.setMenu(R.layout.menu_frame);
+			SlidingMenu rightMenu;
+			rightMenu = new SlidingMenu(this);
+			rightMenu.setMode(SlidingMenu.RIGHT);
+			// This will make the menu only open when you swipe near the edge of
+			// the screen. Other option is FULLSCREEN
+			rightMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
+			rightMenu.setShadowWidth(5);
+			rightMenu.setFadeDegree(0.0f);
+			rightMenu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+			rightMenu.setBehindWidth(200);
+			rightMenu.setMenu(R.layout.right_menu_frame);
+			
+			SlidingMenu leftMenu;
+			leftMenu = new SlidingMenu(this);
+			leftMenu.setMode(SlidingMenu.LEFT);
+			// This will make the menu only open when you swipe near the edge of
+			// the screen. Other option is FULLSCREEN
+			leftMenu.setTouchModeAbove(SlidingMenu.TOUCHMODE_MARGIN);
+			leftMenu.setShadowWidth(5);
+			leftMenu.setFadeDegree(0.0f);
+			leftMenu.attachToActivity(this, SlidingMenu.SLIDING_CONTENT);
+			leftMenu.setBehindWidth(200);
+			leftMenu.setMenu(R.layout.left_menu_frame);
 
-			navBar = (LinearLayout) menu.findViewById(R.id.navBar);
+			navBar = (LinearLayout) leftMenu.findViewById(R.id.navBar);
 
 			FragmentManager frgman = getFragmentManager();
 			FragmentTransaction frgTrans = frgman.beginTransaction();
