@@ -59,10 +59,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:background="@drawable/red_gradient"
+                    android:clickable="true"
                     android:drawableRight="@drawable/monotone_arrow_next_right"
                     android:gravity="center_vertical"
                     android:onClick="swapFragToGrav"
-                    android:clickable="true"
                     android:padding="15dp"
                     android:text="@string/ModuleTextDescription_1" />
             </LinearLayout>
@@ -73,12 +73,13 @@
                 android:layout_height="wrap_content"
                 android:orientation="horizontal" >
 
-                <ImageView
+                <ImageButton
                     android:id="@+id/Module3Icon_Button"
                     android:layout_width="200dp"
                     android:layout_height="200dp"
                     android:background="@drawable/green_gradient"
                     android:contentDescription="@string/ImageDescription"
+                    android:onClick="swapFragToUnivGrav"
                     android:scaleType="fitXY"
                     android:src="@drawable/module_icon_one" />
 
@@ -87,8 +88,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:background="@drawable/green_gradient"
+                    android:clickable="true"
                     android:drawableRight="@drawable/monotone_arrow_next_right"
                     android:gravity="center_vertical"
+                    android:onClick="swapFragToUnivGrav"
                     android:padding="15dp"
                     android:text="@string/ModuleTextDescription_2" />
             </LinearLayout>
@@ -105,6 +108,7 @@
                     android:layout_height="200dp"
                     android:background="@drawable/red_gradient"
                     android:contentDescription="@string/ImageDescription"
+                    android:onClick="swapFragToOptics"
                     android:scaleType="fitXY"
                     android:src="@drawable/optics" />
 
@@ -113,8 +117,10 @@
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:background="@drawable/red_gradient"
+                    android:clickable="true"
                     android:drawableRight="@drawable/monotone_arrow_next_right"
                     android:gravity="center_vertical"
+                    android:onClick="swapFragToOptics"
                     android:padding="15dp"
                     android:text="@string/ModuleTextDescription_3" />
             </LinearLayout>

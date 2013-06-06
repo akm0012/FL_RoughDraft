@@ -14,11 +14,9 @@
         android:layout_height="wrap_content"
         tools:layout="@layout/side_panel_fragment" />
 
-    <fragment
-        android:id="@+id/moduleSelectorFragment_landscape"
-        android:name="edu.auburn.akm0012.fl_roughdraft_fragments.ModuleSelect_Fragment"
+    <FrameLayout
+        android:id="@+id/moduleSelectorFragment_Landscape"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:layout="@layout/module_select_fragment" />
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

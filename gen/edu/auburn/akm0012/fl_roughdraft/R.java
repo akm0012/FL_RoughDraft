@@ -152,7 +152,7 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ConfirmPasswordField=0x7f040008;
         public static final int LogInButton=0x7f04000a;
         public static final int LoginLayout=0x7f040005;
-        public static final int Menu_add=0x7f040022;
+        public static final int Menu_add=0x7f040023;
         public static final int Module2Icon_Button=0x7f040015;
         public static final int Module3Icon_Button=0x7f040018;
         public static final int Module4Icon_Button=0x7f04001b;
@@ -163,27 +163,28 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ModuleDetailsLinearLayout3=0x7f040017;
         public static final int ModuleDetailsLinearLayout4=0x7f04001a;
         public static final int ModuleSelectHeader=0x7f040013;
-        public static final int Module_Button=0x7f04001e;
+        public static final int Module_Button=0x7f04001f;
         public static final int NewUserButton=0x7f040009;
         public static final int OverallModuleSelectLinearLayout=0x7f040012;
         public static final int PasswordField=0x7f040007;
-        public static final int Settings_Button=0x7f04001d;
+        public static final int Settings_Button=0x7f04001e;
         public static final int UserNameField=0x7f040006;
-        public static final int action_settings=0x7f040020;
+        public static final int action_settings=0x7f040021;
         public static final int fullscreen=0x7f040003;
         public static final int left=0x7f040000;
         public static final int logoImage=0x7f04000b;
         public static final int margin=0x7f040002;
-        public static final int menu_refresh=0x7f040021;
-        public static final int moduleSelectorFragment=0x7f04000d;
-        public static final int moduleSelectorFragment_landscape=0x7f040010;
+        public static final int menu_refresh=0x7f040022;
+        public static final int moduleSelectorFragment_Landscape=0x7f040010;
+        public static final int moduleSelectorFragment_Portrait=0x7f04000d;
         public static final int module_Frame_Landscape=0x7f04000e;
         public static final int module_Frame_Portrait=0x7f04000c;
+        public static final int navBar=0x7f04001d;
         public static final int right=0x7f040001;
         public static final int selected_view=0x7f040004;
         public static final int sidePanelFragment_SlideMenu=0x7f040011;
         public static final int sidePanelFragment_landscape=0x7f04000f;
-        public static final int slidingmenumain=0x7f04001f;
+        public static final int slidingmenumain=0x7f040020;
     }
     public static final class layout {
         public static final int activity_log_in=0x7f030000;
@@ -191,8 +192,10 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int gravity_exercises_fragment=0x7f030002;
         public static final int menu_frame=0x7f030003;
         public static final int module_select_fragment=0x7f030004;
-        public static final int side_panel_fragment=0x7f030005;
-        public static final int slidingmenumain=0x7f030006;
+        public static final int optics_exercises_fragment=0x7f030005;
+        public static final int side_panel_fragment=0x7f030006;
+        public static final int slidingmenumain=0x7f030007;
+        public static final int univ_gravity_exercises_fragment=0x7f030008;
     }
     public static final class menu {
         public static final int log_in=0x7f080000;
